@@ -1,0 +1,38 @@
+---
+title: "p8105_hw4_wl2632"
+author: "Weijie Liu"
+date: "October 27, 2017"
+output: html_document
+---
+
+## Problem 1
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(haven)
+pups_data = read.csv(file = "./data/FAS_pups.csv") %>%
+  clean_names()
+  
+  
+
+
+```
+
+```{r}
+
+
+
+```
+
+
+```{r}
+
+
+
+
+```
+
+
+
