@@ -15,6 +15,8 @@ library(haven)
 library(rvest)
 library(stringr)
 library(forcats)
+library(ggridges)
+library(ggthemes)
 
 pups_data = read.csv(file = "./data/FAS_pups.csv") %>%
   clean_names() %>%
@@ -28,7 +30,7 @@ pups_data = read.csv(file = "./data/FAS_pups.csv") %>%
 
 * The collaborator will create a plot showing the distribution of post-natal days for each developmental landmark. (pj2325)
 ```{r}
-pups_tidy_data %>% 
+pups_data %>% 
   ggplot(aes(y = PD_outcome, x = days, color = PD_outcome)) +
   geom_density_ridges(scale = 0.7) + labs(title = "Distribution of Post-natal Days for Each Developmental Landmark", x = "Days", y = "PD_Landmarks")
 ```
