@@ -35,6 +35,6 @@ pups_data %>%
   geom_density_ridges(scale = 0.7) + labs(title = "Distribution of Post-natal Days for Each Developmental Landmark", x = "Days", y = "PD_Landmarks")
 ```
 
-
+From the plot, we can clearly conclude that the median value for the four distributions of post-natal days follows: pd_eyes > pd_walk > pd_pivot > pd_ears. As for the degree of dispersion, the distribution of the days of pd_ears and pd_eyes are more centralized than pd_pivot and pd_walk.
 
 
