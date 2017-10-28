@@ -29,12 +29,8 @@ pups_data = read.csv(file = "./data/FAS_pups.csv") %>%
 * The collaborator will create a plot showing the distribution of post-natal days for each developmental landmark. (pj2325)
 ```{r}
 pups_tidy_data %>% 
-  group_by(PD_outcome) %>% 
-  ggplot(aes(x = litter_number, y = days, color = PD_outcome)) +
-  geom_point(alpha = .4) +
-  facet_grid(. ~PD_outcome)
-
-
+  ggplot(aes(y = PD_outcome, x = days, color = PD_outcome)) +
+  geom_density_ridges(scale = 0.7) + labs(title = "Distribution of Post-natal Days for Each Developmental Landmark", x = "Days", y = "PD_Landmarks")
 ```
 
 
