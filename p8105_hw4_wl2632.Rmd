@@ -12,12 +12,18 @@ library(tidyverse)
 library(readxl)
 library(janitor)
 library(haven)
+library(rvest)
+library(stringr)
+library(forcats)
+
 pups_data = read.csv(file = "./data/FAS_pups.csv") %>%
-  clean_names()
+  clean_names() %>%
+  gather(key = PD_outcome, value = days, pd_ears:pd_walk) %>%
+  mutate(sex = str_replace(sex, "1", "male"),
+         sex = str_replace(sex, "2", "female")) %>%
+  filter(!is.na(days))
   
   
-
-
 ```
 
 ```{r}
